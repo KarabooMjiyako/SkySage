@@ -17,7 +17,7 @@ function refreshWeather(response) {
         'Mist': 'https://i.ibb.co/gvGqwG5/mist.png'
     };
 
-    const weatherMain = data.condition.text;
+    const weatherMain = response.data.condition.text;
     let iconUrl = weatherIcons[weatherMain] || 'https://i.ibb.co/R7rNsGd/cloud.png';
 
     
