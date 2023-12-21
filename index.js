@@ -17,7 +17,7 @@ function refreshWeather(response) {
         'Mist': 'https://i.ibb.co/gvGqwG5/mist.png'
     };
 
-    const weatherMain = response.data.condition.text || 'Unknown Weather';
+    let weatherMain = response.data.condition.text || 'Unknown Weather';
     let iconUrl = weatherIcons[weatherMain] || 'https://i.ibb.co/R7rNsGd/cloud.png';
 
     
@@ -28,7 +28,6 @@ function refreshWeather(response) {
     windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
     temperatureElement.innerHTML = `${Math.round(temperature)}°C`;
     imageElement.src = iconUrl;
-  
   }
   
   function formatDate(date) {
@@ -70,8 +69,8 @@ function refreshWeather(response) {
   
     searchCity(searchInput.value);
   }
-  
-let searchButtonElement = document.getElementById('bx-search');
+
+  let searchButtonElement = document.getElementById('bx-search');
   searchButtonElement.addEventListener("click", handleSearchSubmit);
   
   searchCity("Randfontein");
