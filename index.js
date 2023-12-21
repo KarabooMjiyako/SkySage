@@ -17,7 +17,7 @@ function refreshWeather(response) {
         'Mist': 'https://i.ibb.co/gvGqwG5/mist.png'
     };
 
-    const weatherMain = response.data.condition.text;
+    const weatherMain = response.data.condition.text || 'Unknown Weather';
     let iconUrl = weatherIcons[weatherMain] || 'https://i.ibb.co/R7rNsGd/cloud.png';
 
     
@@ -27,8 +27,8 @@ function refreshWeather(response) {
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
     temperatureElement.innerHTML = `${Math.round(temperature)}°C`;
-imageElement.src = "iconUrl";
-  imageElement.alt = "weatherMain || 'Unknown Weather'";
+    imageElement.src = iconUrl;
+  
   }
   
   function formatDate(date) {
