@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkySage</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
@@ -14,14 +14,14 @@
         <div class="search-box" id="search-form">
             <i class='bx bxs-map'></i>
             <input type="text" placeholder="enter your location" id="search-input" required>
-            <button class='bx bx-search' id="searchFormButton"></button>
+            <button class='bx bx-search' type="submit" id="bx-search"></button>
             <h1 id="city"></h1>
             <span id="current-date"></span>
         </div>
         <div class="weather-box">
             <div class="box">
                 <div class="weather">
-                    <img src="https://i.ibb.co/R7rNsGd/cloud.png" alt="" id="icon" class="weather-app-icon">
+                    <img src= "https://i.ibb.co/R7rNsGd/cloud.png" alt="" id="icon" class="weather-app-icon" />
                     <p class="temperature" id="temperature">0<span>°C</span></p>
                     <p class="description" id="description">Broken Clouds</p>
                 </div>
