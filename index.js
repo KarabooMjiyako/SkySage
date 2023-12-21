@@ -72,6 +72,6 @@ function refreshWeather(response) {
   }
   
   let searchButton = document.querySelector('#bx-search');
-  searchFormElement.addEventListener("click", handleSearchSubmit);
+  searchButtonElement.addEventListener("click", handleSearchSubmit);
   
   searchCity("Randfontein");
