@@ -9,7 +9,7 @@ function refreshWeather(response) {
     let currentDate = new Date();
     let imageElement = document.querySelector("#icon");
 
-    const weatherIcons = {
+    let weatherIcons = {
         'Clear': 'https://i.ibb.co/0XPnVdc/clear.png',
         'Rain': 'https://i.ibb.co/FxmRy5n/rain.png',
         'Snow': 'https://i.ibb.co/zfftwpf/snow.png',
@@ -17,7 +17,8 @@ function refreshWeather(response) {
         'Mist': 'https://i.ibb.co/gvGqwG5/mist.png'
     };
 
-    const iconUrl = weatherIcons[weatherMain] || 'https://i.ibb.co/R7rNsGd/cloud.png';
+    const weatherMain = data.condition.text;
+    let iconUrl = weatherIcons[weatherMain] || 'https://i.ibb.co/R7rNsGd/cloud.png';
 
     
     cityElement.innerHTML = response.data.city;
@@ -72,9 +73,4 @@ function refreshWeather(response) {
   let searchFormElement = document.querySelector("#search-form");
   searchFormElement.addEventListener("submit", handleSearchSubmit);
   
-  searchCity("Mexico");
-  
-  let searchFormElement = document.querySelector("#search-form");
-  searchFormElement.addEventListener("submit", handleSearchSubmit);
-  
-  searchCity("Paris");
+  searchCity("Randfontein");
