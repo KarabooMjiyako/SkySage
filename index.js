@@ -121,5 +121,5 @@ function refreshWeather(response) {
   let searchButtonElement = document.getElementById('bx-search');
   searchButtonElement.addEventListener("click", handleSearchSubmit);
   
-  searchCity("Mexico");
+  searchCity("Randfontein");
   
