@@ -92,11 +92,13 @@ body{
 .weather-box{
     text-align: center;
     margin: 40px 0;
-    margin-top: 65px;
+    margin-top: 75px;
 }
 
-.weather-box img{
-    width: 40%;   
+.weather-box #icon{
+    width: 200px;   
+    align-items: center;
+    margin: 0 auto;
 }
 
 .weather-box .temperature{
